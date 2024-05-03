@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .imageFilpCard {
+            perspective: 1000px;
+        }
+    
+        .imageFilpCard-inner {
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+    
+        .imageFilpCard.flip .imageFilpCard-inner {
+            transform: rotateX(180deg);
+        }
+    
+        .front, .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+    
+        .back {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex justify-center items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            
+              <div class="imageFilpCard cursor-pointer imageFilpCardFunction w-fit">
+                <div class="imageFilpCard-inner w-56 h-80">
+                  <div class="front">
+                   <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714608000&semt=ais" alt="akl;md">
+                  </div>
+                  <div class="back bg-gray-200 p-4 hyphens-auto h-full flex justify-center items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aspernatur corporis magnam, vero deleniti distinctio error quibusdam tempore maiores quidem commodi optio incidunt. Eaque vel repudiandae aliquid saepe beatae sed.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="imageFilpCard cursor-pointer imageFilpCardFunction w-fit">
+                <div class="imageFilpCard-inner w-56 h-80">
+                  <div class="front">
+                   <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714608000&semt=ais" alt="akl;md">
+                  </div>
+                  <div class="back bg-gray-200 p-4 hyphens-auto h-full flex justify-center items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aspernatur corporis magnam, vero deleniti distinctio error quibusdam tempore maiores quidem commodi optio incidunt. Eaque vel repudiandae aliquid saepe beatae sed.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="imageFilpCard cursor-pointer imageFilpCardFunction w-fit">
+                <div class="imageFilpCard-inner w-56 h-80">
+                  <div class="front">
+                   <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714608000&semt=ais" alt="akl;md">
+                  </div>
+                  <div class="back bg-gray-200 p-4 hyphens-auto h-full flex justify-center items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aspernatur corporis magnam, vero deleniti distinctio error quibusdam tempore maiores quidem commodi optio incidunt. Eaque vel repudiandae aliquid saepe beatae sed.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="imageFilpCard cursor-pointer imageFilpCardFunction w-fit">
+                <div class="imageFilpCard-inner w-56 h-80">
+                  <div class="front">
+                   <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714608000&semt=ais" alt="akl;md">
+                  </div>
+                  <div class="back bg-gray-200 p-4 hyphens-auto h-full flex justify-center items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aspernatur corporis magnam, vero deleniti distinctio error quibusdam tempore maiores quidem commodi optio incidunt. Eaque vel repudiandae aliquid saepe beatae sed.</p>
+                  </div>
+                </div>
+              </div>
+           
+        </div>
+      </div>
+      
+
+      
+      <script>
+          const imageFilpCard = document.querySelectorAll('.imageFilpCardFunction');
+      
+          imageFilpCard.forEach(c => {
+              c.addEventListener('mouseenter', function () {
+                  this.classList.toggle('flip');
+              });
+              c.addEventListener('mouseleave', function () {
+                  this.classList.toggle('flip');
+              });
+          })
+      </script>
+</body>
+</html>
